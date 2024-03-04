@@ -1,0 +1,114 @@
+/* Reset some Bootstrap defaults to make the design full-width and more girly */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Cursive', sans-serif;
+  background-color: #FFD1DC; /* Light pink background */
+  color: #333;
+}
+
+.app {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#addNew {
+  background-color: #FBCCE7; /* Lighter pink for buttons */
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+#addNew:hover {
+  background-color: #F78FB3;
+}
+
+.fa-plus {
+  margin-left: 10px;
+}
+
+#todos {
+  margin-top: 20px;
+}
+
+#todos div {
+  background-color: #FFF0F5; /* Very light pink, almost white */
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#todos div .options i {
+  color: #F78FB3;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #FFF0F5; /* Soft pink background */
+  border-radius: 20px; /* Rounded corners for the modal */
+  border: 2px solid #FBCCE7; /* Light pink border */
+}
+
+.modal-header, .modal-body, .modal-footer {
+  padding: 20px; /* More padding for a spacious look */
+}
+
+.modal-title {
+  font-family: 'Cursive', sans-serif; /* Cursive font for the title */
+  color: #F78FB3; /* Pink color for the text */
+}
+
+.btn {
+  border-radius: 20px; /* Rounded buttons */
+  font-weight: bold; /* Bold text for better readability */
+}
+
+.btn-primary {
+  background-color: #FBCCE7; /* Light pink background for primary button */
+  border-color: #FBCCE7;
+}
+
+.btn-primary:hover {
+  background-color: #F78FB3; /* Darker pink on hover */
+  border-color: #F78FB3;
+}
+
+.btn-secondary {
+  background-color: #FFD1DC; /* Soft pink background for secondary button */
+  border-color: #FFD1DC;
+}
+
+.btn-secondary:hover {
+  background-color: #FBCCE7; /* Light pink on hover */
+  border-color: #FBCCE7;
+}
+
+/* Customizing the input fields for a more gentle look */
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #FBCCE7;
+  box-shadow: none; /* Removing Bootstrap's default shadow */
+}
+
+.form-control:focus {
+  border-color: #F78FB3;
+  box-shadow: none; /* Keeping the focus style clean */
+}
+
+/* Adjustments for full width and a cuter, more cohesive look */
+.app {
+  width: auto;
+  overflow: visible;
+}
+
+body {
+  overflow: auto;
+}
+
