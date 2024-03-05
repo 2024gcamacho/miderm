@@ -6,18 +6,64 @@ html, body {
   background-color: #FFD1DC; /* Light pink background */
   color: #333;
 }
-.dropbtn {
-  background-color: transparent; /* Button is transparent */
-  border: none; /* No border */
-  cursor: pointer; /* Clickable cursor style */
-  padding: 20px; /* Padding around the bars icon */
-  margin: 0;
+/* Align the dropdown to the right */
+.dropdown {
+  position: absolute;
+  top: 20px; /* Adjust based on your header's size */
+  right: 20px; /* Adjust based on your layout's spacing */
+  z-index: 1000; /* To keep dropdown on top */
 }
 
-/* When the dropdown content is shown, we want it to be visible */
-.dropdown-content.show {
+/* Style the dropdown trigger icon */
+.dropdown .fa-bars {
+  font-size: 24px; /* Icon size, adjust as needed */
+  cursor: pointer;
+  color: #F78FB3; /* Icon color to match the theme */
+}
+
+/* Hidden dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #FFF0F5; /* Very light pink, similar to other elements */
+  min-width: 160px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Style for buttons in dropdown to match the theme */
+.dropdown-content button {
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  background-color: #FBCCE7; /* Lighter pink for buttons */
+  border: none;
+  text-align: left;
+  font-family: 'Cursive', sans-serif; /* Cursive font for consistency */
+  width: 100%;
+  box-sizing: border-box; /* To include padding in width */
+  border-bottom: 1px solid #FFD1DC; /* Light pink border for separation */
+}
+
+/* No border for the last button */
+.dropdown-content button:last-child {
+  border-bottom: none;
+}
+
+/* Style for button hover to match the theme */
+.dropdown-content button:hover {
+  background-color: #F78FB3; /* Darker pink for button hover */
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
   display: block;
 }
+
+
 h1 {
   position: relative;
   padding-bottom: 20px; /* Adjust based on your preference */
