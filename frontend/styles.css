@@ -1,74 +1,54 @@
-/* Reset some Bootstrap defaults to make the design full-width and more girly */
 html, body {
   height: 100%;
   margin: 0;
   font-family: 'Cursive', sans-serif;
-  background-color: #FFD1DC; /* Light pink background */
+  background-color: #FFD1DC;
   color: #333;
 }
-/* Align the dropdown to the right */
+
 .dropdown {
-  position: absolute;
-  top: 20px; /* Adjust based on your header's size */
-  right: 20px; /* Adjust based on your layout's spacing */
-  z-index: 1000; /* To keep dropdown on top */
+    position: relative;
+    display: inline-block;
 }
 
-/* Style the dropdown trigger icon */
-.dropdown .fa-bars {
-  font-size: 24px; /* Icon size, adjust as needed */
-  cursor: pointer;
-  color: #F78FB3; /* Icon color to match the theme */
+.dropdown i {
+    cursor: pointer;
 }
 
-/* Hidden dropdown content */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #FFF0F5; /* Very light pink, similar to other elements */
-  min-width: 160px;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-/* Style for buttons in dropdown to match the theme */
 .dropdown-content button {
-  color: #333;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-  background-color: #FBCCE7; /* Lighter pink for buttons */
-  border: none;
-  text-align: left;
-  font-family: 'Cursive', sans-serif; /* Cursive font for consistency */
-  width: 100%;
-  box-sizing: border-box; /* To include padding in width */
-  border-bottom: 1px solid #FFD1DC; /* Light pink border for separation */
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
 }
 
-/* No border for the last button */
-.dropdown-content button:last-child {
-  border-bottom: none;
-}
-
-/* Style for button hover to match the theme */
 .dropdown-content button:hover {
-  background-color: #F78FB3; /* Darker pink for button hover */
+    background-color: #f1f1f1;
 }
 
-/* Display dropdown content on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
-
 
 h1 {
   position: relative;
-  padding-bottom: 20px; /* Adjust based on your preference */
-  margin-bottom: 20px; /* Space below the header */
-  font-size: 2.5rem; /* Larger font size for emphasis */
+  padding-bottom: 20px; 
+  margin-bottom: 20px;
+  font-size: 2.5rem; 
 }
 
 h1:after {
@@ -76,9 +56,9 @@ h1:after {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%; /* Line width - can adjust to taste */
-  height: 2px; /* Line thickness */
-  background-color: #F78FB3; /* Line color */
+  width: 100%;
+  height: 2px;
+  background-color: #F78FB3;
 }
 
 .app {
@@ -91,7 +71,7 @@ h1:after {
 }
 
 #addNew {
-  background-color: #FBCCE7; /* Lighter pink for buttons */
+  background-color: #FBCCE7; 
   color: #333;
   border: none;
   padding: 10px 20px;
@@ -113,7 +93,7 @@ h1:after {
 }
 
 #todos div {
-  background-color: #FFF0F5; /* Very light pink, almost white */
+  background-color: #FFF0F5; 
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -125,58 +105,56 @@ h1:after {
 }
 
 .modal-content {
-  background-color: #FFF0F5; /* Soft pink background */
-  border-radius: 20px; /* Rounded corners for the modal */
-  border: 2px solid #FBCCE7; /* Light pink border */
+  background-color: #FFF0F5;
+  border-radius: 20px;
+  border: 2px solid #FBCCE7;
 }
 
 .modal-header, .modal-body, .modal-footer {
-  padding: 20px; /* More padding for a spacious look */
+  padding: 20px;
 }
 
 .modal-title {
-  font-family: 'Cursive', sans-serif; /* Cursive font for the title */
-  color: #F78FB3; /* Pink color for the text */
+  font-family: 'Cursive', sans-serif;
+  color: #F78FB3;
 }
 
 .btn {
-  border-radius: 20px; /* Rounded buttons */
-  font-weight: bold; /* Bold text for better readability */
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .btn-primary {
-  background-color: #FBCCE7; /* Light pink background for primary button */
+  background-color: #FBCCE7;
   border-color: #FBCCE7;
 }
 
 .btn-primary:hover {
-  background-color: #F78FB3; /* Darker pink on hover */
+  background-color: #F78FB3;
   border-color: #F78FB3;
 }
 
 .btn-secondary {
-  background-color: #FFD1DC; /* Soft pink background for secondary button */
+  background-color: #FFD1DC;
   border-color: #FFD1DC;
 }
 
 .btn-secondary:hover {
-  background-color: #FBCCE7; /* Light pink on hover */
+  background-color: #FBCCE7;
   border-color: #FBCCE7;
 }
 
-/* Customizing the input fields for a more gentle look */
 .form-control {
   border-radius: 15px;
   border: 1px solid #FBCCE7;
-  box-shadow: none; /* Removing Bootstrap's default shadow */
+  box-shadow: none;
 }
 
 .form-control:focus {
   border-color: #F78FB3;
-  box-shadow: none; /* Keeping the focus style clean */
+  box-shadow: none;
 }
 
-/* Adjustments for full width and a cuter, more cohesive look */
 .app {
   width: auto;
   overflow: visible;
@@ -185,4 +163,3 @@ h1:after {
 body {
   overflow: auto;
 }
-
