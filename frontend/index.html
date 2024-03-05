@@ -21,17 +21,13 @@
     <div class="app mx-auto">
       <h1 class="mb-3">Journal</h1>
 
-      <button
-        id="addNew"
-        onClick="tryAdd()"
-        data-bs-toggle="modal"
-        data-bs-target="#modal-add"
-      >
-        <span>Add New Entry</span>
-        <i class="fas fa-plus"></i>
-      </button>
-
-      <h2 class="text-center my-3">Daily Log</h2>
+      <div class="header-container">
+        <h2 class="daily-log-title">Daily Log</h2>
+        <button id="addNew" onClick="tryAdd()" data-bs-toggle="modal" data-bs-target="#modal-add">
+            <span>Add New Entry</span>
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
 
       <div id="todos"></div>
     </div>

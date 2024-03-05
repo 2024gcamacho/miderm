@@ -7,6 +7,23 @@ html, body {
   color: #333;
 }
 
+h1 {
+  position: relative;
+  padding-bottom: 20px; /* Adjust based on your preference */
+  margin-bottom: 20px; /* Space below the header */
+  font-size: 2.5rem; /* Larger font size for emphasis */
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Line width - can adjust to taste */
+  height: 2px; /* Line thickness */
+  background-color: #F78FB3; /* Line color */
+}
+
 .app {
   max-width: 100%;
   margin: auto;

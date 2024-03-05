@@ -63,15 +63,16 @@ let refreshTodos = () => {
         formattedDate = formattedDate.replace(day, `${day}${ordinal}`);
 
         todos.innerHTML += `
-          <div id="todo-${todo.id}">
-            <span class="fw-bold fs-4">${formattedDate}</span>
-            <pre class="text-secondary ps-3">${todo.description}</pre>
-            <span class="options">
-              <i onClick="tryEditTodo(${todo.id})" data-bs-toggle="modal" data-bs-target="#modal-edit" class="fas fa-edit"></i>
-              <i onClick="deleteTodo(${todo.id})" class="fas fa-trash-alt"></i>
-            </span>
-          </div>
-        `;
+        <div id="todo-${todo.id}">
+          <span class="fw-bold fs-4">${formattedDate}</span>
+          <pre class="text-secondary ps-3">${todo.description}</pre>
+          <span class="options">
+            <button onClick="tryEditTodo(${todo.id})" data-bs-toggle="modal" data-bs-target="#modal-edit" class="btn btn-primary">Edit</button>
+            <button onClick="deleteTodo(${todo.id})" class="btn btn-danger">Delete</button>
+          </span>
+        </div>
+      `;
+      
       } else {
         todos.innerHTML += `
           <div id="todo-${todo.id}">
