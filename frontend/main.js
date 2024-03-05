@@ -21,7 +21,6 @@ document.getElementById('form-add').addEventListener('submit', (e) => {
   } else {
     addTodo(titleInput.value, descInput.value);
 
-    // close modal
     let add = document.getElementById('add');
     add.setAttribute('data-bs-dismiss', 'modal');
     add.click();
@@ -50,20 +49,15 @@ let refreshTodos = () => {
   data
     .sort((a, b) => b.id - a.id)
     .forEach((todo) => {
-      // Assuming todo.title is the date in 'YYYY-MM-DD' format
       const dateValue = todo.title;
       
-      // Creating a date object at noon to avoid timezone issues
       const dateComponents = dateValue.split('-');
       const dateObject = new Date(Date.UTC(dateComponents[0], dateComponents[1] - 1, dateComponents[2], 12));
 
-      // Check if the date object is valid
       if (!isNaN(dateObject)) {
-        // Options for formatting to a more readable form
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         let formattedDate = dateObject.toLocaleDateString('en-US', options);
 
-        // Extract the day from the date object and append the correct ordinal
         const day = dateObject.getUTCDate();
         const ordinal = getOrdinalSuffix(day);
         formattedDate = formattedDate.replace(day, `${day}${ordinal}`);
@@ -95,7 +89,6 @@ let refreshTodos = () => {
 };
 
 
-// Function to get the ordinal suffix for a number
 function getOrdinalSuffix(i) {
   var j = i % 10,
       k = i % 100;
@@ -115,9 +108,8 @@ let tryEditTodo = (id) => {
   const todo = data.find((x) => x.id === id);
   selectedTodo = todo;
   todoId.innerText = todo.id;
-  titleEditInput.value = todo.title; // Assuming todo.title is the date in 'YYYY-MM-DD' format
+  titleEditInput.value = todo.title; 
   
-  // Parse and format the date for display
   const dateObject = new Date(todo.title);
   if (!isNaN(dateObject)) {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -145,7 +137,6 @@ document.getElementById('form-edit').addEventListener('submit', (e) => {
   } else {
     editTodo(titleEditInput.value, descEditInput.value);
 
-    // close modal
     let edit = document.getElementById('edit');
     edit.setAttribute('data-bs-dismiss', 'modal');
     edit.click();
