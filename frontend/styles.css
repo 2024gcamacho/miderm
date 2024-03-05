@@ -6,47 +6,18 @@ html, body {
   background-color: #FFD1DC; /* Light pink background */
   color: #333;
 }
-/* Positioning and styling the dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  float: right; /* Position to the top right */
-  margin: 10px; /* Adjust based on your layout */
+.dropbtn {
+  background-color: transparent; /* Button is transparent */
+  border: none; /* No border */
+  cursor: pointer; /* Clickable cursor style */
+  padding: 20px; /* Padding around the bars icon */
+  margin: 0;
 }
 
-/* Styling the dropdown button */
-.dropdown i {
-  cursor: pointer;
-  color: #333; /* Icon color */
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+/* When the dropdown content is shown, we want it to be visible */
+.dropdown-content.show {
   display: block;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 h1 {
   position: relative;
   padding-bottom: 20px; /* Adjust based on your preference */
